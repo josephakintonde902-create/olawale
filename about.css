@@ -1,0 +1,148 @@
+.about-section {
+  background: linear-gradient(180deg, #f8fbff, #ffffff);
+  padding: 40px 8%;
+  font-family: "Segoe UI", sans-serif;
+  color: #1a1a1a;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* MAIN LAYOUT */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+/* TEXT */
+.about-text {
+  flex: 1;
+  max-width: 520px;
+}
+
+.about-text h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* IMAGE */
+.about-visual {
+  flex: 1;
+  text-align: center;
+}
+
+.about-visual img {
+  max-width: 420px;
+  width: 100%;
+}
+
+/* MISSION BOX */
+.mission-box {
+  margin-top: 0;
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  padding: 40px;
+  border-radius: 24px;
+  color: #fff;
+  max-width: 900px;
+  width: 100%;
+}
+
+.mission-box h3 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.mission-box p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about-section {
+    padding: 30px 6%;
+    min-height: 100vh;
+  }
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+    margin-bottom: 30px;
+  }
+
+  .about-text h2 {
+    font-size: 28px;
+  }
+
+  .about-text p {
+    font-size: 15px;
+  }
+
+  .mission-box {
+    text-align: center;
+    padding: 30px;
+  }
+
+  .mission-box h3 {
+    font-size: 20px;
+  }
+
+  .mission-box p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-section {
+    padding: 24px 5%;
+    min-height: 100vh;
+  }
+
+  .about-container {
+    gap: 30px;
+    margin-bottom: 20px;
+  }
+
+  .about-text h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .about-text p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .about-visual img {
+    max-width: 300px;
+  }
+
+  .mission-box {
+    padding: 25px 20px;
+  }
+
+  .mission-box h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .mission-box p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}
