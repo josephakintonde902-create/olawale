@@ -97,6 +97,35 @@ body {
   flex: 1;
   display: grid;
   grid-template-columns: 1.1fr 1fr;
+/* Responsive adjustments for enlarged About section */
+@media (max-width: 900px) {
+  .about-text h2 {
+    font-size: 40px;
+  }
+
+  .about-text p {
+    font-size: 16px;
+    max-width: 520px;
+  }
+
+  .feature-pill {
+    padding: 16px 18px;
+    gap: 12px;
+    font-size: 15px;
+  }
+
+  .feature-pill span {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  .about-text h2 { font-size: 32px; }
+  .about-text p { font-size: 15px; }
+  .about-top { margin-bottom: 60px; }
+}
   align-items: center;
   gap: 24px;
 }
@@ -280,29 +309,32 @@ body {
 .about-top {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
-  gap: 60px;
+  gap: 80px;
   align-items: center;
-  margin-bottom: 100px;
+  margin-bottom: 120px;
 }
 
 /* TEXT */
 .about-label {
-  font-size: 14px;
-  font-weight: 600;
-  color: #4b5ba8;
+  font-size: 16px;
+  font-weight: 700;
+  color: #27408a;
+  letter-spacing: 0.6px;
 }
 
 .about-text h2 {
-  font-size: 38px;
-  margin: 14px 0 18px;
+  font-size: 56px;
+  margin: 18px 0 22px;
   color: #07203a;
+  line-height: 1.05;
 }
 
 .about-text p {
-  max-width: 520px;
-  font-size: 16px;
-  line-height: 1.7;
-  color: #555555;
+  max-width: 720px;
+  font-size: 18px;
+  line-height: 1.9;
+  color: #4a5568;
+  margin-top: 6px;
 }
 
 /* FEATURE PILLS */
@@ -315,25 +347,25 @@ body {
 .feature-pill {
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 16px 20px;
-  border-radius: 16px;
+  gap: 18px;
+  padding: 20px 26px;
+  border-radius: 20px;
   background: linear-gradient(135deg, #f6f9ff, var(--card-bg));
   box-shadow: var(--shadow-strong);
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 700;
   color: var(--text-dark);
 }
 
 .feature-pill span {
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   color: white;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 /* Pill colors */
@@ -766,5 +798,187 @@ body {
     display: none;
   }
 }
+/* Section Spacing */
+.about-section {
+  padding: 60px 40px;
+  margin-bottom: 40px;
+}
 
-/* ...existing code... */
+.build-section {
+  padding: 80px 40px;
+  margin: 60px 0;
+  background-color: #f9f9f9;
+}
+
+.build-section h3 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+}
+
+.trust-work {
+  padding: 80px 40px;
+  margin: 60px 0;
+}
+
+/* Mobile Responsive Spacing */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 40px 20px;
+    margin-bottom: 30px;
+  }
+
+  .about-top {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .about-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  .build-section {
+    padding: 50px 20px;
+    margin: 40px 0;
+  }
+
+  .build-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .build-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .trust-work {
+    padding: 50px 20px;
+    margin: 40px 0;
+  }
+
+  .trust-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+
+  .work-container {
+    margin-top: 60px;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+/* Mobile-specific responsive tweaks (phones) */
+@media (max-width: 600px) {
+  .about-section,
+  .build-section {
+    min-height: auto;
+    padding: 40px 16px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .about-top {
+    gap: 24px;
+    padding: 24px 0;
+  }
+
+  .about-text h2 {
+    font-size: 28px;
+    line-height: 1.12;
+    margin-bottom: 12px;
+  }
+
+  .about-text p {
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 100%;
+    color: #55606a;
+  }
+
+  .about-features {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .feature-pill {
+    justify-content: flex-start;
+    padding: 14px 16px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(11,13,40,0.12);
+  }
+
+  .feature-pill span {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .build-section > .build-grid {
+    padding: 0;
+    margin-bottom: 40px;
+  }
+
+  /* disable scroll snap on small screens for smoother natural scrolling */
+  body {
+    scroll-snap-type: none;
+  }
+
+  .about-section,
+  .build-section {
+    scroll-snap-align: none;
+  }
+}
+
+/* Fullscreen Sections: make Section 2 (about) and Section 3 (build) occupy one viewport each */
+html, body {
+  height: 100%;
+}
+
+.about-section,
+.build-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px; /* keep some horizontal padding */
+}
+
+.about-section > .about-top {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 0; /* restore vertical spacing inside the fullscreen block */
+}
+
+.build-section h3 {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 30px;
+  padding-top: 80px;
+}
+
+.build-section > .build-grid {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 80px;
+}
+
+/* Optional: make these two sections snap to viewport start when scrolling */
+body {
+  scroll-snap-type: y proximity;
+}
+
+.about-section,
+.build-section {
+  scroll-snap-align: start;
+}
